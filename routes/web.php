@@ -16,6 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-    $post= \App\Post::find(1);
-    $post->delete();
+    \App\Post::destroy(2);
 });

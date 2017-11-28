@@ -16,8 +16,8 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-   $post= \App\Post::find(1);
-   $post->title= 'saved title';
-   $post->content= 'saved content';
-   $post->save();
+       $comment = new \App\Comment();
+       $comment -> title = 'test title';
+       $comment -> content ='test content';
+       $comment -> save();
 });

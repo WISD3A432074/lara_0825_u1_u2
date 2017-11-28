@@ -16,6 +16,6 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-    $posts = \App\Post::all();
-    dd($posts);
+    $post=\App\Post::find(4);
+    dd($post);
 });

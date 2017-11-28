@@ -16,6 +16,6 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-    $post=\App\Post::find(4);
+    $post=\App\Post::where('id','<',10)->orderBy('id','DESC')->get();
     dd($post);
 });

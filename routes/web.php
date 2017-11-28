@@ -16,8 +16,8 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-      $fourthPost = \App\Post::find(4);
-       dd($fourthPost);
-      $lastPost = \App\Post::orderBy('id','DESC') ->first();
-       dd($lastPost);
+   $post= \App\Post::find(1);
+   $post->title= 'saved title';
+   $post->content= 'saved content';
+   $post->save();
 });

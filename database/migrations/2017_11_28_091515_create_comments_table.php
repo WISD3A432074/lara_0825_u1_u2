@@ -13,7 +13,12 @@
       */
      public function up()
      {
-         //
+               Schema::create('comments', function (Blueprint $table) {
+                    $table->increments('id');
+                    $table->string('title');
+                    $table->text('content');
+                    $table->timestamps();
+                });
      }
 
      /**
@@ -23,6 +28,6 @@
       */
      public function down()
      {
-         //
+         Schema::dropIfExists('comments');
      }
  }

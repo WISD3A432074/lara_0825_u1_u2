@@ -16,8 +16,8 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-       $comment = new \App\Comment();
-       $comment -> title = 'test title';
-       $comment -> content ='test content';
-       $comment -> save();
+       $post = \App\Post::find(1);
+       foreach ($post->comments as $comment){
+       echo $comment->content.'<br>';
+       }
 });
